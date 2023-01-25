@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+RewriteCond %{HTTP_HOST} ^esmailkhalifa\.xyz$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.esmailkhalifa\.xyz$
+RewriteRule ^/?$ "https\:\/\/esmailkhalifa\.xyz\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^esmailkhalifa\.multibdshop\.com$
+RewriteRule ^/?$ "https\:\/\/esmailkhalifa\.xyz\/" [R=301,L]
+
